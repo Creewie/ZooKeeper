@@ -1,0 +1,6 @@
+﻿### GET request to example server
+GET http://localhost:3000
+
+###
+### GET wszystkie zwierzeta
+GET http://localhost:3000/animals
