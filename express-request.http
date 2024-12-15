@@ -10,19 +10,19 @@ GET http://localhost:3000/endangered
 ### GET ANIMAL BY HABITAT
 GET http://localhost:3000/habitat/tundra
 
-### GET ANIMAL BY SPECIES
-GET http://localhost:3000/species/delfin
+### GET LIONS
+GET http://localhost:3000/species/lew
 
 ### POST NEW ANIMAL
 POST http://localhost:3000/animals
 Content-Type: application/json
 
 {
-  "name": "Rysiu",
-  "species": "delfin",
-  "age": "6",
-  "isEndangered": true,
-  "habitat": "ocean"
+  "name": "Hubi",
+  "species": "wilk",
+  "age": "2",
+  "isEndangered": false,
+  "habitat": "lasy"
 }
 
 ### UPDATE AN ANIMAL

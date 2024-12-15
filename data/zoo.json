@@ -10,9 +10,9 @@
   {
     "id": 2,
     "name": "Franio",
-    "species" : "pingwin",
-    "age" : 6,
-    "isDangered" : true,
-    "habitat" : "Antarktyda"
+    "species" : "lew",
+    "age" : 9,
+    "isDangered" : false,
+    "habitat" : "sawanna"
   }
 ]
