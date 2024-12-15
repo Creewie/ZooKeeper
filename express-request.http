@@ -2,5 +2,5 @@
 GET http://localhost:3000
 
 ###
-### GET wszystkie zwierzeta
+### GET all animals
 GET http://localhost:3000/animals
