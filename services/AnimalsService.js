@@ -9,7 +9,6 @@ const filePath = path.join(dataDir, "zoo.json");
 
 async function loadData(){
     try{
-        console.log(`Loading data from ${filePath}`);
         const data = await fs.readFile(filePath, 'utf8');
         console.log(JSON.parse(data));
         return JSON.parse(data);
@@ -27,5 +26,4 @@ async function saveData(animals){
 }
 export const getAllAnimals = async () => {
     return await loadData()
-    console.log("Wczytano dane z pliku zoo.json")
 }

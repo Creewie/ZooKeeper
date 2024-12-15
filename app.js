@@ -8,6 +8,7 @@ app.get('/',(req,res)=>{
     res.send("Następne strony:<br> " +
         "<a href='http://localhost:3000/animals'>Wszystkie zwierzęta</a><br>")
 })
+
 app.get("/animals", AnimalsController.getAllAnimals)
 
 app.listen(port, ()=>{
