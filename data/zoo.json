@@ -1,0 +1,18 @@
+﻿[
+  {
+    "id": 1,
+    "name": "Rysio",
+    "species" : "delfin",
+    "age" : 6,
+    "isDangered" : true,
+    "habitat" : "ocean"
+  },
+  {
+    "id": 2,
+    "name": "Franio",
+    "species" : "pingwin",
+    "age" : 6,
+    "isDangered" : true,
+    "habitat" : "Antarktyda"
+  }
+]
