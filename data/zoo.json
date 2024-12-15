@@ -20,7 +20,7 @@
     "name": "Krzysio",
     "species": "jelien",
     "age": 18,
-    "isEndangered": true,
+    "isEndangered": false,
     "habitat": "lasy"
   }
 ]

@@ -21,7 +21,7 @@ async function saveData(animals){
         throw new Error("Nie udało się zapisać danych w zoo.json " + err.message)
     }
 }
-export async function getAnimalById(id){
+export async function getAnimalsById(id){
     try{
         const animals = await getAllAnimals()
         return animals.find((animal) => animal.id === id)
@@ -45,4 +45,42 @@ export async function getAnimalsByHabitat(habitat){
     }catch(err){
         throw new Error("Nie znaleziono środowiska")
     }
+}
+export async function getAnimalsBySpieces(species){
+    try{
+        const animals = await getAllAnimals()
+        return animals.filter(animal => animal.species.toLowerCase() === species.toLowerCase())
+    }catch(err){
+        throw new Error("Nie znaleziono gatunku")
+    }
+}
+export const addAnimal = async (animal) => {
+    const animals = await getAllAnimals()
+    const newAnimal = {
+        id: animals.length > 0 ? animals[animals.length - 1].id + 1 : 1,
+        ...animal
+    }
+    animals.push(newAnimal)
+    await saveData(animals)
+    return newAnimal
+}
+export const updateAnimal = async (id, animal) => {
+    const animals = await getAllAnimals()
+    const index = animals.findIndex(animal => animal.id === id)
+
+    if(index < 0) throw new Error ("Zwierze nie istnieje")
+
+    animals[index] = {...animals[index], ...animal}
+    await saveData(animals)
+    return animals[index]
+}
+export const deleteAnimal = async (id) => {
+    const animals = await getAllAnimals()
+    const index = animals.findIndex(animal => animal.id === id)
+
+    if(index < 0) throw new Error ("Zwierze nie istnieje")
+
+    animals.splice(index, 1)
+    await saveData(animals)
+    return true;
 }
