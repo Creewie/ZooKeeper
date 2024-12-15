@@ -14,5 +14,13 @@
     "age": 9,
     "isEndangered": false,
     "habitat": "sawanna"
+  },
+  {
+    "id": 3,
+    "name": "Krzysio",
+    "species": "jelien",
+    "age": 18,
+    "isEndangered": true,
+    "habitat": "lasy"
   }
 ]

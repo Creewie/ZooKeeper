@@ -26,3 +26,13 @@ export const getEndangeredAnimals = async (req, res) => {
         res.status(500).json({error: "Nie udało się znaleźć zagrożonych gatunków " + err.message})
     }
 }
+
+export const getAnimalByHabitat = async (req, res) => {
+    try{
+        const habitat = req.params.habitat
+        const animals = await AnimalsService.getAnimalsByHabitat(habitat)
+        res.json(animals)
+    }catch(err){
+        res.status(500).json({error: "Nie udało się znaleźć środowiska" + err.message})
+    }
+}

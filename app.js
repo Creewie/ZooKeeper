@@ -10,8 +10,9 @@ app.get('/',(req,res)=>{
 })
 
 app.get("/animals", AnimalsController.getAllAnimals)
+app.get("/animals/endangered/", AnimalsController.getEndangeredAnimals)
+app.get("/animals/habitat/:habitat", AnimalsController.getAnimalByHabitat)
 app.get("/animals/:id", AnimalsController.getAnimalById)
-app.get("/animals/endangered", AnimalsController.getEndangeredAnimals)
 
 app.listen(port, ()=>{
     console.log("Serwer na hoście: " + port);

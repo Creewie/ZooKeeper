@@ -5,9 +5,9 @@ const filePath = path.resolve("data", "zoo.json")
 
 export async function getAllAnimals() {
     try{
-        console.log("Wczytywanie danych z " + filePath);
+        // console.log("Wczytywanie danych z " + filePath);
         const data = await fs.readFile(filePath, 'utf8')
-        // return JSON.parse(data.replace(/^\uFEFF/, ""));
+        // return JSON.parse(data.replace(/^\uFEFF/, "")); //BOM
         return JSON.parse(data)
     }catch(err){
         throw new Error(`Bład przy pobieraniu zoo.json, ${err.message}`);
@@ -29,12 +29,20 @@ export async function getAnimalById(id){
         throw new Error("Nie znaleziono zwierzęta o tym ID")
     }
 }
-export const getEndangeredAnimals = async () => {
+export async function getEndangeredAnimals(){
     try{
         const animals = await getAllAnimals()
-        return animals.filter(animal => animal.isEndangered == true)
+        return animals.filter(animal => animal.isEndangered)
     }
     catch(err){
         throw new Error("Nie udało się znaleźć zagrożonych gatunków")
+    }
+}
+export async function getAnimalsByHabitat(habitat){
+    try{
+        const animals = await getAllAnimals()
+        return animals.filter(animal => animal.habitat.toLowerCase() === habitat.toLowerCase())
+    }catch(err){
+        throw new Error("Nie znaleziono środowiska")
     }
 }
