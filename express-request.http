@@ -1,6 +1,37 @@
-﻿### GET request to example server
-GET http://localhost:3000
-
-###
-### GET all animals
+﻿### GET ALL ANIMALS
 GET http://localhost:3000/animals
+
+### GET ANIMAL BY ID
+GET http://localhost:3000/animals/1
+
+### GET ENDANGERED ANIMALS
+GET http://localhost:3000/endangered
+
+### GET ANIMAL BY HABITAT
+GET http://localhost:3000/habitat/tundra
+
+### GET ANIMAL BY SPECIES
+GET http://localhost:3000/species/delfin
+
+### POST NEW ANIMAL
+POST http://localhost:3000/animals
+Content-Type: application/json
+
+{
+  "name": "Rysiu",
+  "species": "delfin",
+  "age": "6",
+  "isEndangered": true,
+  "habitat": "ocean"
+}
+
+### UPDATE AN ANIMAL
+PUT http://localhost:3000/animals/1
+Content-Type: application/json
+
+{
+  "isEndangered": false
+}
+
+### DELETE AN ANIMAL
+DELETE http://localhost:3000/animals/2
