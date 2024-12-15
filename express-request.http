@@ -5,13 +5,13 @@ GET http://localhost:3000/animals
 GET http://localhost:3000/animals/1
 
 ### GET ENDANGERED ANIMALS
-GET http://localhost:3000/endangered
+GET http://localhost:3000/animals/endangered
 
 ### GET ANIMAL BY HABITAT
-GET http://localhost:3000/habitat/tundra
+GET http://localhost:3000/animals/habitat/tundra
 
 ### GET LIONS
-GET http://localhost:3000/species/lew
+GET http://localhost:3000/animals/species/lew
 
 ### POST NEW ANIMAL
 POST http://localhost:3000/animals
