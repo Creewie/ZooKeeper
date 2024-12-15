@@ -2,17 +2,17 @@
   {
     "id": 1,
     "name": "Rysio",
-    "species" : "delfin",
-    "age" : 6,
-    "isDangered" : true,
-    "habitat" : "ocean"
+    "species": "delfin",
+    "age": 6,
+    "isEndangered": true,
+    "habitat": "ocean"
   },
   {
     "id": 2,
     "name": "Franio",
-    "species" : "lew",
-    "age" : 9,
-    "isDangered" : false,
-    "habitat" : "sawanna"
+    "species": "lew",
+    "age": 9,
+    "isEndangered": false,
+    "habitat": "sawanna"
   }
 ]
